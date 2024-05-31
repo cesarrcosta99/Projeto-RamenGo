@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.container {
+    background-image: url('../assets/Rectangle\ 1.png');
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+
+}
+
+.ramen {
+    width: 124px;
+    height: 15px;
+    margin-left: 40px;
+    margin-top: 40.33px;
+}
+
+.entregadora {
+    width: 619px;
+    height: 574px;
+    margin-top:38px;
+    margin-left: -56px;
+}
+
+.secondcontainer {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.japones {
+    margin-bottom: 24px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    width: 201px;
+    height: 124px;
+    color: #FFFFFF;
+    margin-left: 159px;
+    text-align: start;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 166px;
+    left: 369px;
+    font-size: 148px;
+    font-weight: 900;
+    color: #FAFAED;
+}
+
+button {
+    position: relative;
+    left: 60px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-top: 24px;
+}
+
+button:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,106 @@
+
+.container h1{
+     font-size: 32px;
+     font-weight: 900;
+     line-height: 47.52px;
+     text-align: center;
+     color:#000000;
+     margin-top: 73px;
+}
+
+.paragrafo{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 47px;
+}
+
+.broths{
+    display: flex;
+    gap:64px;
+}
+
+.proteins{
+    display: flex;
+    gap:64px;
+    margin-bottom: 80px;
+}
+
+.second-container, .third-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 0px 4px 12px 0px #E0DBBF99;
+    background-color: #FAFAED;
+    width: 320px;
+    height: 316px;
+    padding-top: 48px;
+    text-align: center;
+    cursor: pointer;
+
+    .name{
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+    color: #1820EF;
+    margin-top:14px;
+    margin-bottom:10px;
+    }
+
+    .description{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+    margin-bottom:36px;
+    }
+
+    .price{
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+    color:#FF4E42;
+    }
+}
+
+.card img {
+    width: 104px;
+  height: 104px;
+}
+
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    margin:0 auto;
+    margin-bottom:126px;
+}
+
+button:hover{
+    opacity:0.8;
+}
+
+.selected {
+    background-color: #1820EF;
+
+    .name{
+        color: #FFFFFF;
+    }
+
+    .description{
+        color: #FFFFFF;
+    }
+
+    .price{
+        color: #FFC024;
+    }
+
+}
