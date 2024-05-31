@@ -1,0 +1,107 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+    .your{
+    font-size: 20px;
+  font-weight: 900;
+   line-height: 24px;
+   text-align: center;
+   color: #FFFFFF;
+    }
+
+    .description{
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 47.52px;
+    text-align: center;
+    color: #FFC024;
+    }
+}
+
+.metade-container{
+    background-image: url('../assets/backgroud-sucess.png');
+    width: 50%;
+    height: 100%;
+}
+
+.image{
+    max-width: 350px;
+    max-height: 400px;
+    margin-bottom: -52px;
+    margin-top: -28px;
+    margin-bottom: -26px;
+    margin-top: 64px;
+}
+
+.ramengo{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.second-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centralizar-japao{
+    text-align: center;
+    margin-top:259px;
+    margin-bottom:18px;
+}
+
+.outra-metade{
+    background-color: #fff;
+    width: 50%;
+    height: 100%;
+
+    .japao{
+        width: 65.46px;
+        height: 71.31px;
+    }
+
+    .japones{
+        
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: center;
+    color: #FFC024;
+    margin-bottom:15px;
+    }
+
+    .prepared{
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 40px;
+    text-align: center;
+    color: #FF4E42;
+    }
+
+    .aguardar{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    margin-top:6px;
+    margin-bottom:32px;
+    }
+}
+
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    margin:0 auto;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+

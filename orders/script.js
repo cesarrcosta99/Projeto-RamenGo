@@ -87,12 +87,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Content-Type': 'application/json'
             }
         })
-        .then(() => {
+        .then(response => {
             alert('Pedido enviado com sucesso!');
+            localStorage.setItem('orderData',JSON.stringify(response.data))
+
+            window.location.href='../sucess/index.html'
+
         })
         .catch(error => {
             console.error('Erro ao enviar pedido:', error);
             alert('Erro ao enviar pedido. Por favor, tente novamente.');
         });
+
     });
 });
