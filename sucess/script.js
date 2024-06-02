@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         description.textContent=getLocalStorage.description
     }
 
-    document.addEventListener('click',()=>{
+    button.addEventListener('click',()=>{
         window.location.href='../orders/index.html'
     })
 })

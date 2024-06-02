@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const apiKey = "ZtVdh8XQ2U8pWI2gmZ7f796Vh8GllXoN7mr0djNf";
     const brothsContainer = document.querySelector('.broths');
     const proteinsContainer = document.querySelector('.proteins');
+    const buttonImage = document.getElementById('defaultImage');
     let selectedBrothId = null;
     let selectedProteinId = null;
 
@@ -29,6 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (type === 'proteins') {
                 selectedProteinId = item.id;
             }
+
+            if (selectedBrothId && selectedProteinId) {
+                buttonImage.src = "../assets/button-sucess.png";
+            }
         });
 
         card.querySelector('img').setAttribute('data-image-inactive', item.imageInactive);
@@ -37,7 +42,35 @@ document.addEventListener('DOMContentLoaded', () => {
         return card;
     };
 
-    
+    const updateCarouselIndicators = (carousel, container) => {
+        const indicators = carousel.querySelectorAll('.carousel-indicator');
+        const totalItems = container.children.length;
+        const itemWidth = container.children[0].offsetWidth;
+        const scrollPosition = container.scrollLeft;
+        const currentItem = Math.round(scrollPosition / itemWidth);
+
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentItem);
+        });
+    };
+
+    const setupCarousel = (container, type) => {
+        const carousel = container.closest('.carousel');
+        const indicatorContainer = carousel.querySelector('.carousel-controls');
+
+        const totalItems = container.children.length;
+        for (let i = 0; i < totalItems; i++) {
+            const indicator = document.createElement('div');
+            indicator.className = 'carousel-indicator';
+            if (i === 0) indicator.classList.add('active');
+            indicatorContainer.appendChild(indicator);
+        }
+
+        container.addEventListener('scroll', () => {
+            updateCarouselIndicators(carousel, container);
+        });
+    };
+
     axios.get('https://api.tech.redventures.com.br/broths', {
         headers: {
             'x-api-key': apiKey
@@ -48,12 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = createCard(broth, 'broths');
             brothsContainer.appendChild(card);
         });
+        setupCarousel(brothsContainer, 'broths');
     })
     .catch(error => {
         console.error('Erro ao buscar broths:', error);
     });
 
-    
     axios.get('https://api.tech.redventures.com.br/proteins', {
         headers: {
             'x-api-key': apiKey
@@ -64,12 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = createCard(protein, 'proteins');
             proteinsContainer.appendChild(card);
         });
+        setupCarousel(proteinsContainer, 'proteins');
     })
     .catch(error => {
         console.error('Erro ao buscar proteins:', error);
     });
 
-    
     document.getElementById('submitButton').addEventListener('click', () => {
         if (!selectedBrothId || !selectedProteinId) {
             alert('Selecione um caldo e uma proteína.');

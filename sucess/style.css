@@ -1,32 +1,32 @@
-.container{
+.container {
     height: 100vh;
     width: 100vw;
     display: flex;
 
-    .your{
-    font-size: 20px;
-  font-weight: 900;
-   line-height: 24px;
-   text-align: center;
-   color: #FFFFFF;
+    .your {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
     }
 
-    .description{
-    font-size: 32px;
-    font-weight: 900;
-    line-height: 47.52px;
-    text-align: center;
-    color: #FFC024;
+    .description {
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 47.52px;
+        text-align: center;
+        color: #FFC024;
     }
 }
 
-.metade-container{
+.metade-container {
     background-image: url('../assets/backgroud-sucess.png');
     width: 50%;
     height: 100%;
 }
 
-.image{
+.image {
     max-width: 350px;
     max-height: 400px;
     margin-bottom: -52px;
@@ -35,73 +35,129 @@
     margin-top: 64px;
 }
 
-.ramengo{
+.ramengo {
     margin-top: 40px;
     margin-left: 40px;
 }
 
-.second-container{
+.second-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.centralizar-japao{
+.centralizar-japao {
     text-align: center;
-    margin-top:259px;
-    margin-bottom:18px;
+    margin-top: 259px;
+    margin-bottom: 18px;
 }
 
-.outra-metade{
+.outra-metade {
     background-color: #fff;
     width: 50%;
     height: 100%;
 
-    .japao{
+    .japao {
         width: 65.46px;
         height: 71.31px;
     }
 
-    .japones{
-        
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 24px;
-    text-align: center;
-    color: #FFC024;
-    margin-bottom:15px;
+    .japones {
+
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 24px;
+        text-align: center;
+        color: #FFC024;
+        margin-bottom: 15px;
     }
 
-    .prepared{
-    font-size: 32px;
-    font-weight: 900;
-    line-height: 40px;
-    text-align: center;
-    color: #FF4E42;
+    .prepared {
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 40px;
+        text-align: center;
+        color: #FF4E42;
     }
 
-    .aguardar{
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: center;
-    color: #000000;
-    margin-top:6px;
-    margin-bottom:32px;
+    .aguardar {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        color: #000000;
+        margin-top: 6px;
+        margin-bottom: 32px;
     }
 }
 
-button{
+button {
     border: none;
     background: none;
     cursor: pointer;
     width: 100%;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
-button:hover{
+button:hover {
     opacity: 0.8;
 }
 
+@media screen and (max-width:900px) {
+    .container {
+        flex-direction: column;
 
+        .your {
+            margin-bottom: 16px;
+        }
+
+        .description {
+            font-size: 24px;
+            width: 365px;
+            margin-bottom: 90px;
+        }
+    }
+
+    .metade-container {
+        width: 100%;
+    }
+
+    .image {
+        max-width: 338px;
+        max-height: 374px;
+        margin-top: 29px;
+        margin-bottom: 11px;
+    }
+
+    .ramengo {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .outra-metade {
+        width: 100%;
+
+        .prepared {
+            font-size: 24px;
+            width: 325px;
+            margin-left: 20px;
+        }
+
+        .aguardar {
+            margin-top: 24px;
+            width: 325px;
+            margin-left: 34px;
+        }
+    }
+
+
+    .centralizar-japao {
+        margin-top: 65px;
+    }
+
+    button {
+        margin-bottom: 72px;
+    }
+}
