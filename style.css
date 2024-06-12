@@ -108,11 +108,13 @@ button:hover {
         text-align: center;
         position: relative;
         left: 6px;
-        top: -91px;
+        top: -184px;
     }
 
     button {
-        display: none;
+        position: relative;
+        top: 7rem;
+        left: 40px;
     }
 
     p {

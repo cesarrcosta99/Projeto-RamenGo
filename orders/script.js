@@ -76,32 +76,32 @@ document.addEventListener('DOMContentLoaded', () => {
             'x-api-key': apiKey
         }
     })
-    .then(response => {
-        response.data.forEach(broth => {
-            const card = createCard(broth, 'broths');
-            brothsContainer.appendChild(card);
+        .then(response => {
+            response.data.forEach(broth => {
+                const card = createCard(broth, 'broths');
+                brothsContainer.appendChild(card);
+            });
+            setupCarousel(brothsContainer, 'broths');
+        })
+        .catch(error => {
+            console.error('Erro ao buscar broths:', error);
         });
-        setupCarousel(brothsContainer, 'broths');
-    })
-    .catch(error => {
-        console.error('Erro ao buscar broths:', error);
-    });
 
     axios.get('https://api.tech.redventures.com.br/proteins', {
         headers: {
             'x-api-key': apiKey
         }
     })
-    .then(response => {
-        response.data.forEach(protein => {
-            const card = createCard(protein, 'proteins');
-            proteinsContainer.appendChild(card);
+        .then(response => {
+            response.data.forEach(protein => {
+                const card = createCard(protein, 'proteins');
+                proteinsContainer.appendChild(card);
+            });
+            setupCarousel(proteinsContainer, 'proteins');
+        })
+        .catch(error => {
+            console.error('Erro ao buscar proteins:', error);
         });
-        setupCarousel(proteinsContainer, 'proteins');
-    })
-    .catch(error => {
-        console.error('Erro ao buscar proteins:', error);
-    });
 
     document.getElementById('submitButton').addEventListener('click', () => {
         if (!selectedBrothId || !selectedProteinId) {
@@ -120,17 +120,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Content-Type': 'application/json'
             }
         })
-        .then(response => {
-            alert('Pedido enviado com sucesso!');
-            localStorage.setItem('orderData',JSON.stringify(response.data))
+            .then(response => {
+                alert('Pedido enviado com sucesso!');
+                localStorage.setItem('orderData', JSON.stringify(response.data))
 
-            window.location.href='../sucess/index.html'
+                window.location.href = '../sucess/index.html'
 
-        })
-        .catch(error => {
-            console.error('Erro ao enviar pedido:', error);
-            alert('Erro ao enviar pedido. Por favor, tente novamente.');
-        });
+            })
+            .catch(error => {
+                console.error('Erro ao enviar pedido:', error);
+                alert('Erro ao enviar pedido. Por favor, tente novamente.');
+            });
 
     });
 });
